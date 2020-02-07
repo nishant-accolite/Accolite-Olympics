@@ -1,13 +1,119 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  font-size: 1rem;
+  background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.5), transparent);
+  /* mix-blend-mode: luminosity; */
+  font-family: 'Oswald', sans-serif;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.header ul li {
+  margin: 0 1em;
+  padding: 1em;
+}
+.header ul li a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #555;
+  font-size: 20px;
+}
+.header ul li a::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 3px;
+  color:#555;
+  transition: all 0.2s linear;
+}
+.header ul li a:hover::after {
+  width: 100%;
+  background-color: #111;
+}
+.header ul li a:hover {
+  color: #333;
+  font-size: x-large;
+}
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  /* background-image: url(/olympic1.png);
+  background-size: cover; */
+  scroll-snap-align: center;
+}
+
+.container :nth-of-type(odd) {
+  font-family: 'Abel', sans-serif;
+}
+
+.container :nth-of-type(even) {
+  font-family: 'Lobster', cursive;
+}
+
+.container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  scroll-behavior: smooth;
+  padding:0px 200px;
+}
+
+.accoliteLogoLeft {
+  width: 20em;
+  position: fixed;
+}
+
+.accoliteLogoRight {
+  width: 9em;
+  right: 1em;
+  position: fixed;
+  top: 0em;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3cc8ff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0967b1; 
 }
