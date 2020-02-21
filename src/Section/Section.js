@@ -1,6 +1,7 @@
 import React from 'react';
 import config from '../config';
 import ScoreTable from '../ScoreTable/ScoreTable';
+import MyGallery from './MyGallery';
 
 class Section extends React.Component {
 
@@ -25,21 +26,65 @@ class Section extends React.Component {
         return (
             <div className="container">
                 <section id="home">
-                HOME --------  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper quis. Egestas sed sed risus pretium. Eu turpis egestas pretium aenean pharetra. Tempus urna et pharetra pharetra massa massa ultricies. Senectus et netus et malesuada fames ac turpis egestas maecenas. Maecenas pharetra convallis posuere morbi. Vulputate ut pharetra sit amet aliquam id diam. Leo integer malesuada nunc vel risus commodo viverra. Vehicula ipsum a arcu cursus vitae congue mauris. Pulvinar elementum integer enim neque volutpat ac tincidunt. Massa massa ultricies mi quis. Dignissim sodales ut eu sem integer. Sed augue lacus viverra vitae congue eu.
+                  <div>
+                  <div className="heading">Accolite Olympics started with a thought of Connecting People!</div>
+                  
+                  <div className="content">It was a unique initiative started in the year 2018 with an objective of  employee engagement beyond work. Sports is a powerful medium that can bring corporate employees together as a close-knit team.	</div>
+
+                  <div className="heading">Accolite Olympics Trophy is a rolling trophy!</div> 
+ 
+                  <div className="content">The prestigious overall champions trophy was won by Hyderabad & Bengaluru in 2018 & 2019 respectively. Last year all players were asked to write down why they would want to win the trophy and attach the write up as pride rolls to the trophy to remind our athletes that
+                  we are strength and face of Accolite Family which always stands together.	 
+                  </div>
+
+                  <div className="heading">
+                    Accolite Olympics used to be known as Inter-Location sports meet  
+                  </div>
+                  
+                  <div className="content">
+                    The 1st edition of this event was named as Inter-location Sports. It was renamed as Accolite       
+                    Olympics from the 2nd edition.  After a lot of efforts, a new and eye catching  logo for Accolite Olympics 2020 was finalized this year.     		
+                    <br/>
+                    In the first edition of the event in 2018, Delhi Smashers, Bengaluru Blokechains (was renamed as Bengaluru Bolts in 2019) and Hyderabad Strikers competed for the coveted trophy. In 2019, Mumbai City & Chennai Spartans entered the arena, along with other three teams, to make the event more exciting and challenging. With the addition of Bengaluru Thunder, the number of teams in 2020 has gone up to five making the event more scintillating and competitive. 	
+                    <br/>
+                    It was a hard-fought battle for Cricket, Futsal, Carrom, Table Tennis, Badminton and Online Gaming (PUBG) in 2019. In the 2nd edition, Women Cricket was introduced and Delhi Smashers won it. In 2020, again three new games namely Throwball, Volleyball and Athletics - Track & Throw have been introduced. Considering the safety of the players as many of them got injured last year, Futsal has been dropped from the event.There is also an element of surprise in “Fun Games”.	  
+                  </div>  
+                  </div>
                 </section>
                 <section id="news">
-                NEWS -------- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper quis. Egestas sed sed risus pretium. Eu turpis egestas pretium aenean pharetra. Tempus urna et pharetra pharetra massa massa ultricies. Senectus et netus et malesuada fames ac turpis egestas maecenas. Maecenas pharetra convallis posuere morbi. Vulputate ut pharetra sit amet aliquam id diam. Leo integer malesuada nunc vel risus commodo viverra. Vehicula ipsum a arcu cursus vitae congue mauris. Pulvinar elementum integer enim neque volutpat ac tincidunt. Massa massa ultricies mi quis. Dignissim sodales ut eu sem integer. Sed augue lacus viverra vitae congue eu.
+                  9 days to go
                 </section>
                 <section id="schedule">
-                SCHEDULE -------- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper quis. Egestas sed sed risus pretium. Eu turpis egestas pretium aenean pharetra. Tempus urna et pharetra pharetra massa massa ultricies. Senectus et netus et malesuada fames ac turpis egestas maecenas. Maecenas pharetra convallis posuere morbi. Vulputate ut pharetra sit amet aliquam id diam. Leo integer malesuada nunc vel risus commodo viverra. Vehicula ipsum a arcu cursus vitae congue mauris. Pulvinar elementum integer enim neque volutpat ac tincidunt. Massa massa ultricies mi quis. Dignissim sodales ut eu sem integer. Sed augue lacus viverra vitae congue eu.
+                  To Be Announced
                 </section>
                 <section id="scores">
                     {/* <button onClick={() => this.getXLSXData()}>Update Scores</button> */}
                     <ScoreTable data={this.state.sheetData} />
                     {/* <div>{this.state.sheetData}</div> */}
                 </section>
+                <section id="gallery">
+                  <MyGallery></MyGallery>
+                </section>
                 <section id="contact">
-                CONTACT US -------- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper quis. Egestas sed sed risus pretium. Eu turpis egestas pretium aenean pharetra. Tempus urna et pharetra pharetra massa massa ultricies. Senectus et netus et malesuada fames ac turpis egestas maecenas. Maecenas pharetra convallis posuere morbi. Vulputate ut pharetra sit amet aliquam id diam. Leo integer malesuada nunc vel risus commodo viverra. Vehicula ipsum a arcu cursus vitae congue mauris. Pulvinar elementum integer enim neque volutpat ac tincidunt. Massa massa ultricies mi quis. Dignissim sodales ut eu sem integer. Sed augue lacus viverra vitae congue eu.
+                  <div className="companyContact">
+                    <div className="heading">Accolite India Software Pvt Ltd</div>
+                    <br/> &nbsp; Address: 2nd Floor, Umiya Business Bay, Tower 1, Cessna Business Park, Marathahalli-Sarjapur Outer Ring Road, Kadubeesanahalli, Bengaluru, Karnataka 560103
+                    <br/> <br/> &nbsp; Phone: 080 4091 0233
+                  </div>
+                  <div className="horizontalBreaker">
+                    &nbsp;
+                  </div>
+                  <div className="induvidualContact">
+                    <div className="heading">Antony Godwin</div>
+                    &nbsp; antony.godwin@accoliteindia.com
+                    <br/>&nbsp; 8056605905
+                    <br/><br/><div className="heading">Manasa K</div>
+                    &nbsp; manasa.k@accoliteindia.com
+                    <br/>&nbsp; 8056605905
+                    <br/><br/><div className="heading">Naveen Kumar Kandasamy</div>
+                    &nbsp; naveenkumar.kandasamy@accoliteindia.com
+                    <br/>&nbsp; 8056605905
+                  </div>
                 </section>
             </div>
         );

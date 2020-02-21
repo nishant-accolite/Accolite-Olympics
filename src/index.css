@@ -10,24 +10,24 @@ body {
   top: 0;
   z-index: 1;
   display: flex;
-  width: 100%;
-  min-height: 60px;
-  font-size: 1rem;
-  background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0.5), transparent);
-  /* mix-blend-mode: luminosity; */
+  width: 100vw;
+  min-height: 12vh;
+  font-size: 1.5vw;
+  background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 1.0), transparent);
+  z-index: 2;
   font-family: 'Oswald', sans-serif;
 }
 .header ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   display: flex;
-  width: 100%;
+  width: 84vw;
+  margin-left: 8vw;
   justify-content: center;
+  padding-inline-start: 0px;
 }
 .header ul li {
   margin: 0 1em;
-  padding: 1em;
+  /* padding: 1em; */
 }
 .header ul li a {
   position: relative;
@@ -35,15 +35,15 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   color: #555;
-  font-size: 20px;
+  font-size: 2vw;
 }
 .header ul li a::after {
   position: absolute;
-  bottom: -3px;
+  bottom: -0.3vh;
   left: 0;
   content: '';
   width: 0;
-  height: 3px;
+  height: 0.5vh;
   color:#555;
   transition: all 0.2s linear;
 }
@@ -53,27 +53,76 @@ body {
 }
 .header ul li a:hover {
   color: #333;
-  font-size: x-large;
+  font-size: 2.5vw;
 }
+.header ul li a:active::after {
+  position: absolute;
+  bottom: -0.3vh;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 0.5vh;
+  color:#555;
+  transition: all 0.2s linear;
+}
+.header ul li a:active {
+  color: #333;
+  font-size: 2.5vw;
+}
+
+.header ul li a:active::after {
+  width: 100%;
+  background-color: #111;
+}
+
 section {
   position: relative;
   display: flex;
-  width: 100%;
+  width: 80vw;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   background-color: white;
-  /* background-image: url(/olympic1.png);
-  background-size: cover; */
   scroll-snap-align: center;
 }
 
-.container :nth-of-type(odd) {
-  font-family: 'Abel', sans-serif;
+section .companyContact{
+  width: 38vw;
+  float: left;
 }
 
-.container :nth-of-type(even) {
+section .induvidualContact{
+  width: 38vw;
+  float: left;
+}
+
+section .horizontalBreaker{
+  width: 0.5vw;
+  height: 50vh;
+  float: left;
+  border-radius: 1vh;
+  border-left: 0.5vw solid #555;
+  margin: 2vw;
+}
+
+section .heading {
+  font-weight: 600;
+  margin: 1vh 0vh;
+  font-size: 1.75vw;
+}
+
+section .content{
+  text-align:justify;
+}
+
+.container {
+  font-family: 'Abel', sans-serif;
+  font-size: 1.25vw;
+}
+
+.container .notes {
   font-family: 'Lobster', cursive;
+  font-size: 1.25vw;
 }
 
 .container {
@@ -81,36 +130,60 @@ section {
   scroll-snap-type: y mandatory;
   height: 100vh;
   scroll-behavior: smooth;
-  padding:0px 200px;
+  padding:0vh 10vw;
+}
+
+.section :nth-of-type(even) {
+  background-color: #0967b1;
 }
 
 .accoliteLogoLeft {
-  width: 20em;
+  width: 15vw;
   position: fixed;
 }
 
+.image-gallery-slide-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.image-gallery-thumbnails-wrapper{
+  z-index: 2;
+}
+
+.image-gallery {
+  width: 80vw;
+  margin: 15vh 0vh;
+}
+
 .accoliteLogoRight {
-  width: 9em;
-  right: 1em;
   position: fixed;
-  top: 0em;
+  width: 40vw;
+  left: 30vw;
+  top: 10vh;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+#gallery  {
+  /* padding-top:12vh; */
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0.8vw;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+  border-radius: 0.4vw;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #3cc8ff; 
-  border-radius: 10px;
+  border-radius: 0.4vw;
 }
 
 /* Handle on hover */

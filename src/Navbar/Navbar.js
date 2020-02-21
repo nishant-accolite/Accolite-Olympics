@@ -11,6 +11,7 @@ class Navbar extends React.Component {
                 <li><a href="#news">News</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#scores">Scores</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact US</a></li>
                 </ul>
             </div>
