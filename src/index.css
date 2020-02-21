@@ -185,7 +185,7 @@ section .content{
 #squadBar {
   position: absolute !important;
   left: -6vw !important;
-  top: 16vh !important;
+  top: 34vh !important;
 }
 
 .squadBox {
@@ -200,6 +200,14 @@ section .content{
   font-family: cursive;
 }
 
+.currentTeamLogo {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  top: 7vh;
+  left: -5vw;
+}
+
 .games {
   font-family: 'Lobster', cursive;
 }
@@ -211,7 +219,7 @@ section .content{
   overflow-y: scroll;
   position: absolute;
   left: 11vw;
-  top: 14vh;
+  top: 20vh;
 }
 
 /* width */

@@ -233,6 +233,7 @@ export default class SquadPage extends React.Component {
 
         return (
             <div>
+                <img src={'/' + this.state.team + '.png'} className="currentTeamLogo" alt="logo"></img>
                 <div id="squadBar">
                     <a className= {this.state.team === 'bangalorebolts' ? 'activeTeamName' : "teamName"} onClick={() => this.setCurrentSquad('bangalorebolts')}>Bangalore Bolt</a>
                     <a className= {this.state.team === 'bangalorethunder' ? 'activeTeamName' : "teamName"} onClick={() => this.setCurrentSquad('bangalorethunder')}>Bangalore Thunder</a>
