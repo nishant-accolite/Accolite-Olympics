@@ -44,10 +44,12 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2);
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     data.push(player);
                 }
-                console.log(data);
                 callback(data,'hyderabad');
               },
               response => {
@@ -73,10 +75,12 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2)
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     data.push(player);
                 }
-                console.log(data);
                 callback(data,'delhi');
               },
               response => {
@@ -102,10 +106,12 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2)
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     data.push(player);
                 }
-                console.log(data);
                 callback(data,'chennai');
               },
               response => {
@@ -131,10 +137,12 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2)
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     data.push(player);
                 }
-                console.log(data);
                 callback(data,'mumbai');
               },
               response => {
@@ -160,11 +168,13 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2)
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     if(player.name != undefined && player.name.length > 0)
                         data.push(player);
                 }
-                console.log(data);
                 callback(data,'bangalorebolts');
               },
               response => {
@@ -190,11 +200,13 @@ export default class SquadPage extends React.Component {
                             player.games += (response.result.values[0][j] + ', ');
                         }
                     }
-                    player.games = player.games.substring(0, player.games.length - 2)
+                    if(player.games.length > 2)
+                        player.games = player.games.substring(0, player.games.length - 2);
+                    else
+                        player.games = '-';
                     if(player.name != undefined && player.name.length > 0)
                         data.push(player);
                 }
-                console.log(data);
                 callback(data,'bangalorethunder');
               },
               response => {
@@ -226,7 +238,6 @@ export default class SquadPage extends React.Component {
     setCurrentSquad(team) {
         // this.state.currentSquad = this.squads[team];
         this.setState({ 'currentSquad': this.squads[team], 'team' : team });
-        console.log(this.state.currentSquad);
     }
 
     render() {
@@ -246,7 +257,7 @@ export default class SquadPage extends React.Component {
                     { this.state.currentSquad && this.state.currentSquad.length > 0 ? this.state.currentSquad.map(sq => {
                         return (
                             <div className="squadBox" key={sq.name + sq.games}>
-                                <div>{sq.name} </div>
+                                <div className="names">{sq.name} </div>
                                 <div className="games"> {sq.games} </div>
                             </div>
                         )

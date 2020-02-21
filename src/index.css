@@ -179,6 +179,7 @@ section .content{
   padding: 10%;
   display: block;
   width: 15vw;
+  color:white;
   background: linear-gradient(1deg, #0491c9, transparent);
 }
 
@@ -195,9 +196,13 @@ section .content{
   border-radius: 3vw;
   min-width: 22vw;
   min-height: 14vh;
-  background: #e9f7f7;
+  background: #feffff;
+  color: #333;
   text-align: center;
-  font-family: cursive;
+  /* font-family: cursive; */
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .currentTeamLogo {
@@ -209,7 +214,12 @@ section .content{
 }
 
 .games {
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
+  font-style: italic;
+}
+
+.names {
+  font-weight: bold;
 }
 
 .squad {
