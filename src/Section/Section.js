@@ -2,25 +2,26 @@ import React from 'react';
 import config from '../config';
 import ScoreTable from '../ScoreTable/ScoreTable';
 import MyGallery from './MyGallery';
+import SquadPage from './SquadPage';
 
 class Section extends React.Component {
 
     constructor(props){
         super(props);
-        this.componentDidMount()
+        // this.componentDidMount()
         this.state = {
             data : ""
         }
     }
     
-    onLoad = (data, error) => {
-        if (data) {
-          const sheetData = data.data;
-          this.setState({ sheetData });
-        } else {
-          this.setState({ error });
-        }
-      };
+    // onLoad = (data, error) => {
+    //     if (data) {
+    //       const sheetData = data.data;
+    //       this.setState({ sheetData });
+    //     } else {
+    //       this.setState({ error });
+    //     }
+    //   };
 
     render() {
         return (
@@ -51,8 +52,8 @@ class Section extends React.Component {
                   </div>  
                   </div>
                 </section>
-                <section id="news">
-                  9 days to go
+                <section id="squads">
+                  <SquadPage />
                 </section>
                 <section id="schedule">
                   To Be Announced
@@ -90,50 +91,45 @@ class Section extends React.Component {
         );
     }
 
-    componentDidMount() {
-        window.gapi.load("client", this.initClient);
-    }
+    // componentDidMount() {
+    //     window.gapi.load("client", this.initClient);
+    // }
 
-    load(callback) {
-        window.gapi.client.load("sheets", "v4", () => {
-          window.gapi.client.sheets.spreadsheets.values
-            .get({
-              spreadsheetId: config.spreadsheetId,
-              range: "Sheet1!B:D"
-            })
-            .then(
-              response => {
-                const data = response.result.values;
-                callback({
-                  data
-                });
-              },
-              response => {
-                callback(false, response.result.error);
-              }
-            );
-        });
-      }
-    
-    
-    getXLSXData() {
-        
-    }
+    // load(callback) {
+    //     window.gapi.client.load("sheets", "v4", () => {
+    //       window.gapi.client.sheets.spreadsheets.values
+    //         .get({
+    //           spreadsheetId: config.spreadsheetId,
+    //           range: "Sheet1!B:D"
+    //         })
+    //         .then(
+    //           response => {
+    //             const data = response.result.values;
+    //             callback({
+    //               data
+    //             });
+    //           },
+    //           response => {
+    //             callback(false, response.result.error);
+    //           }
+    //         );
+    //     });
+    //   }
 
-    initClient = () => {
-        // 2. Initialize the JavaScript client library.
-        window.gapi.client
-            .init({
-                apiKey: config.apiKey,
-                // Your API key will be automatically added to the Discovery Document URLs.
-                discoveryDocs: config.discoveryDocs
-            })
-            .then(() => {
-                // 3. Initialize and make the API request.
-                  this.load(this.onLoad);
-                // getXLSXData(this.onLoad)
-            });
-    };
+    // initClient = () => {
+    //     // 2. Initialize the JavaScript client library.
+    //     window.gapi.client
+    //         .init({
+    //             apiKey: config.apiKey,
+    //             // Your API key will be automatically added to the Discovery Document URLs.
+    //             discoveryDocs: config.discoveryDocs
+    //         })
+    //         .then(() => {
+    //             // 3. Initialize and make the API request.
+    //               this.load(this.onLoad);
+    //             // getXLSXData(this.onLoad)
+    //         });
+    // };
 
 }
 
